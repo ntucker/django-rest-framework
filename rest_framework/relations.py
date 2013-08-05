@@ -476,8 +476,8 @@ class HyperlinkedRelatedField(RelatedField):
         except Exception:
             raise ValidationError(self.error_messages['no_match'])
 
-        if match.view_name != self.view_name:
-            raise ValidationError(self.error_messages['incorrect_match'])
+        #if match.view_name != self.view_name:
+        #    raise ValidationError(self.error_messages['incorrect_match'])
 
         try:
             return self.get_object(queryset, match.view_name,
