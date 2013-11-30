@@ -419,7 +419,7 @@ class HyperlinkedRelatedField(RelatedField):
         else:
             raise ObjectDoesNotExist()
 
-        return queryset.get(**filter_kwargs)
+        return queryset.get(**view_kwargs)
 
     def to_native(self, obj):
         view_name = self.view_name
